@@ -1,0 +1,130 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+  /* Colors */
+  --color-black: rgb(34, 31, 31);
+  --color-red: rgb(229, 9, 20);
+  --color-white: rgb(250, 250, 250);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.text {
+  text-transform: uppercase;
+}
+
+/* Menu */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav-black {
+  background-color: var(--color-black);
+  width: 60%;
+  max-width: 480px; 
+  min-width: 320px;
+  transition-delay: 0.4s;
+}
+.nav-black.visible {
+  transition-delay: 0s;
+}
+
+.nav-red{
+  background-color: var(--color-red);
+  width: 95%;
+  transition-delay: 0.2s;
+}
+.nav-red.visible {
+  transition-delay: 0.2s;
+}
+
+.nav-white {
+  background-color: var(--color-white);
+  width: 95%;
+  padding: 30px;
+  transition-delay: 0s;
+}
+.nav-white.visible {
+  transition-delay: 0.4s;
+}
+
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.dropdown_list {
+  padding: 0 10px;
+}
+.list__item {}
+.link {
+  display: block;
+  color: var(--color-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 0;
+  transition: all 0.3s;
+}
+.link:hover {
+  color: var(--color-red)
+}
+
+.link:active {
+  transform: translateY(5px);
+}
+
+/*  Images */
+.logo {
+  width: 150px;
+}
+
+/* Buttons */
+.nav-btn {
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.open-btn {
+  font-size: 25px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+.close-btn {
+  opacity: 0.3;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  transition: all 0.2s;
+  
+}
+.close-btn:active {
+  opacity: 1;
+  color: var(--color-red);
+}
+
+
+
+
